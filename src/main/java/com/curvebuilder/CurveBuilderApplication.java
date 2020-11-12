@@ -4,6 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
@@ -14,7 +15,8 @@ public class CurveBuilderApplication {
 
 	public static void main(String[] args) {
 		LOG.info("Running application...");
-		SpringApplication.run(CurveBuilderApplication.class, args);
+		SpringApplicationBuilder builder = new SpringApplicationBuilder(CurveBuilderApplication.class);
+		builder.headless(false).run(args);
 	}
 
 }
