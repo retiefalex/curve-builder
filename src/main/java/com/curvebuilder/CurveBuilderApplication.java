@@ -14,7 +14,7 @@ public class CurveBuilderApplication {
 	private static final Logger LOG = LoggerFactory.getLogger(CurveBuilderApplication.class);
 
 	public static void main(String[] args) {
-		LOG.info("Running application...");
+		LOG.info("Running CurveBuilderApplication");
 		SpringApplicationBuilder builder = new SpringApplicationBuilder(CurveBuilderApplication.class);
 		builder.headless(false).run(args);
 	}
